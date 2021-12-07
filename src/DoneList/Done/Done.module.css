@@ -1,0 +1,6 @@
+.done {
+    display: grid;
+    position: relative;
+    border: 1px solid #b4ec65;
+    padding: 5px;
+}

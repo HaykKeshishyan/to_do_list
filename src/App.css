@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
 }
 
 .App-logo {
@@ -35,4 +37,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.app-wrapper-content {
+  background-color: rgb(0, 0, 0);
+  border-style: double;
+  border-color: white;
+  color: white;
 }

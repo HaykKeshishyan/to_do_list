@@ -1,0 +1,14 @@
+.task {
+    display: grid;
+    position: relative;
+    border: 1px solid #b4ec65;
+    padding: 5px;
+    grid-template-areas: 
+    "n m";
+    grid-template-columns: 6fr 3fr;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+}

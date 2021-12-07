@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import TaskList from './TaskList/TaskList';
+import DoneList from './DoneList/DoneList';
+import Header from './Header/Header';
+import { Route, Routes, } from 'react-router-dom';
 
-function App() {
+let App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <div className="app-wrapper">
+        <Header
+          dispatch={props.dispatch} />
+        <div className="app-wrapper-content">
+          <Routes>
+            <Route path="/tasklist"
+              element={
+              <TaskList
+                tasksData={props.state.tasks.tasksData}
+                dispatch={props.dispatch} />
+                 } />
+             <Route path="/donelist"
+               element={
+               <DoneList
+                doneData={props.state.done.doneData} />
+                } />
+           </Routes> 
+        </div>
+      </div>);
 }
 
 export default App;
